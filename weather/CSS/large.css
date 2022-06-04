@@ -3,4 +3,21 @@
     nav ul li a {
         padding: .5rem 1rem;
     }
+
+    .header-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        margin: 2em;
+        text-align: center;
+    }
+    
+    .header-grid img {
+        float: none;
+    }   
+
+    #weather_forecast_container {
+        display: block;
+    }
 }

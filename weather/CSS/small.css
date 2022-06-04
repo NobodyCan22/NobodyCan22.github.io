@@ -1,7 +1,7 @@
-h1, p {margin: 0 2vw;}
+p {margin: 0 2vw;}
 
 nav {
-    background-color: #eee;
+    background-color: rgb(51,0,51);
 }
 
 nav button {
@@ -18,17 +18,17 @@ nav ul {
     margin: 0;
 }
 
+nav ul li a.active a {
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+}
+
 nav ul li a {
     display: block;
     padding: .8rem 2vw;
     text-decoration: none;
-    color: #333;
-    border-top: 1px solid rgba(0,0,0,0.5);
-}
-
-nav ul li a.active a {
-    background-color: rgba(0,0,0,0.2);
     color: #fff;
+    border-top: 1px solid rgba(0,0,0,0.5);
 }
 
 nav ul li a:hover {
@@ -43,3 +43,96 @@ nav ul.open {display: block;}
 
 #hamburgerBtn.open span:nth-child(1) {display: none;}
 #hamburgerBtn.open span:nth-child(2) {display: block;}
+
+.header-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 2em;
+    text-align: center;
+}
+
+.header {
+    display: inline-block;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    text-align: left;
+    background-color: rgb(153,50,204);
+}
+
+.header_text{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.header_logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 100px;
+}
+
+footer {
+    background-color: rgb(153,50,204);
+    text-align: center;
+}
+
+main{
+    width: 65%;
+    margin: auto;
+    background-color: rgb(153,50,204);
+    font-size: 16px;
+	font-family: "Sansita", Ubuntu, sans-serif;
+}
+
+.content h1, .content h2 {
+    text-align: center;
+}
+
+#weather_container{
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 300px;
+    background-image: url("/weather/images/preston-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+#weather_summary {
+    background-color: rgba(160,32,240,0.5);
+    margin-left: 200px;
+    margin-right: 200px;
+    color: #fff;
+}
+
+body {
+    background-color: rgb(75,0,130);
+}
+
+.ci {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.ci img {
+    grid-column: 3/5;
+}
+
+@media only screen and (max-width: 35rem) {
+    #weather_forecast_container{
+        display:none;
+    }  
+    
+    #weather_summary {
+        display: none;
+    }
+
+    .ci img {
+        display: none;
+    }
+}

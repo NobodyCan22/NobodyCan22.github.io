@@ -8,13 +8,15 @@
         <link rel="stylesheet" href="./CSS/small.css" />
     </head>
 
-    <body>
-        <header>
-            <img src="./images/logo.png" alt="logo">
-            <h1>Always Sunny in Preston</h1>
-            <h2>"As you well know"</h2>
-        </header>
-        
+    <header>
+        <img class="header_logo header" src="./images/logo.png" alt="logo" height="100"/>
+        <div class="header_text header">
+            <h1 class="pagename">Always Sunny in Preston</h1>
+            <h2 class="motto">"As you well know"</h2>
+        </div>
+    </header>
+
+    <body>        
         <nav>
             <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
             <ul id="primaryNav">
@@ -30,15 +32,44 @@
         <main>
             <div class="content">
                 <h1>Preston, Idaho</h1>
-                <h2>Hero w/ weather summary</h2>
-                <h2>5 day forcast</h2>
-                <h2>Article</h2>
+
+                <div id="weather_container">
+                    <div id="weather_summary">
+                        <h2>Weather Summary</h2>
+                        <p>Current: <span id="currentTemp"></span>&#8457;</p>
+                        <p>Max: <span id="maxTemp"></span>&#8457;</p>
+                        <p>Min: <span id="minTemp"></span>&#8457;</p>
+                        <p>Wind Speed: <span id="windSpeed"></span> MPH</p>
+                    </div>
+                </div>
+                    
+                
+                <div id="weather_forecast_container">
+                    <h2>5 day forcast</h2>
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/42d10n111d88/preston/?unit=us" data-label_1="PRESTON" data-theme="original" >PRESTON</a>
+                    <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                    </script>
+                </div>
+
+                <h2>West Side High Honors 2022 Graduating Class</h2>
+                <p>On May 25 at the Dahle Fine Arts Center, 58 West Side seniors stepped across the threshold into adulthood. They will carry with them the many memories and experiences they have had over their years together in school. The auditorium was full of friends and family, some even standing along the back, to witness the ceremony and support the graduates.</p>
+                <p><a href="https://www.hjnews.com/preston/west-side-high-honors-2022-graduating-class/article_5bce4ac9-c7a2-50a6-bfef-1d397311d70d.html">Read More...</a></p>
+
                 <h2>Contact Information</h2>
-            </div>
+                <div class="ci">
+                    <img src="./images/preston-map.png" alt="A map of where Preston is.">
+                </div>
+                    <p><strong>PHONE:</strong> (470) 555-1342</p>
+                    <p><strong>EMAIL:</strong> contactus@alwayssunnyinpreston.com</p>
+                    <p><strong>ADDRESS:</strong> 123 Sesame Street, Preston, Idaho 83263</p>
+                </div>
         </main>
 
+        <br>
+
         <footer>
-            <p class="foot-text"> &copy; <span id="year"></span> | D. Guage Schneider | Utah | BYUI Online Learning</p>
+            <p class="foot-text"> &copy; <span id="year"></span> | D. Guage Schneider | Utah | <a href="https://www.byui.edu/online">BYUI Online Learning</a></p>
             <p class="date"><span id="date"></span></p>
         </footer>
 
